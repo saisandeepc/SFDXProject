@@ -1,0 +1,11 @@
+<apex:page controller="MixedObjectVFController" >
+    <apex:pageBlock title="Details of Departments and Employees">
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!objectList}" var="item">
+            <apex:column headerValue="Employee Number" value="{!item[0]}" />
+            <apex:column headerValue="Employee Name" value="{!item[1]}" />
+            <apex:column headerValue="Department Code" value="{!item[2]}" /> 
+            </apex:pageBlockTable> 
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

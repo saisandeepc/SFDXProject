@@ -1,0 +1,62 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="objectArrayofAccounts"  type="Object[]"/>
+    <aura:attribute name="acct"                                type="Object"/>
+   <lightning:button variant="brand" label="View" onclick="{!c.doInit}" />
+
+    
+    <lightning:tabset >
+        <lightning:tab label="Data Table View">
+            <div class="slds-panel__section">
+                <h3 class="slds-text-heading--small slds-m-bottom--medium">Top 10 Accounts by Revenue</h3>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title--caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Name">Account Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="AnnualRevenue (M)">Revenue(M)</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Billing State">Billing State</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Type">Type</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Industry">Industry</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.objectArrayofAccounts}"  var="a">
+                            <tr>
+                                <th scope="row" data-label="Account Name">
+                                    <div class="slds-truncate" title="Account Name"><a href="javascript:void(0);">{!a.Name}</a></div>
+                                </th>
+                                <td data-label="AnnualRevenue">
+                                    <div class="slds-truncate" title="Revenue"><ui:outputNumber value="{!a.AnnualRevenue/1000000}"/></div>
+                                </td>
+                                <td data-label="BillingState">
+                                    <div class="slds-truncate" title="BillingState">{!a.BillingState}</div>
+                                </td>
+                                <td data-label="Type">
+                                    <div class="slds-truncate" title="Type">{!a.Type}</div>
+                                </td>
+                                <td data-label="Industry">
+                                    <div class="slds-truncate" title="Industry">{!a.Industry}</div>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </lightning:tab>
+        <lightning:tab label="Cards View">
+            Add Card View Component here
+        </lightning:tab>
+        <lightning:tab label="Record Paging View">
+            Add Record Paging Component here
+        </lightning:tab>
+   </lightning:tabset>
+</aura:component>

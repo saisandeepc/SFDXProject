@@ -1,0 +1,5 @@
+<apex:page >
+  <!--Page which displays Greeting message-->
+  Hello,Sai Sandeep<br/>
+ How are you.
+</apex:page>

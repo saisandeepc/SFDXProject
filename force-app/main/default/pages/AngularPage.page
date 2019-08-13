@@ -1,0 +1,60 @@
+<apex:page showHeader="false" standardStylesheets="false" controller="AngularController">
+<html ng-app="todoApp">
+  <head>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>-->
+  </head>
+  <body>
+    <h2>Todo</h2> 
+    <label>Name</label><input type="text" id="Name" /> <br/><br/>
+    <label>Phone</label><input type="text" id="Phone"/><br/><br/>
+      <span id="Result1"/>
+    <button onclick="DisplayName()">Submit</button>
+    <button onclick="angularJSONData()">ConvetJSON</button>   
+    <script>
+    function DisplayName(){
+    var Name=document.getElementById("Name").value; 
+    var Phone=document.getElementById("Phone").value;    
+    console.log(Name);
+    console.log(Phone);
+     Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.AngularController.displayName}',Name,Phone,
+            function(result, event){
+                if (event.status) {
+                   <!--console.log(result);-->
+                   console.log(result);
+                  document.getElementById('Result1').innerHTML = result+'  '+result.Name+'  '+result.Phone
+                } else if (event.type === 'exception') {
+                   <!--console.log(result);-->
+                } else {
+                }
+            }, 
+            {escape: true}
+        );
+    }
+     function angularJSONData(){
+    var Name=document.getElementById("Name").value; 
+    var Phone=document.getElementById("Phone").value;    
+    var obj = { 'Name':Name,'RollNo': Phone};
+    var strobj=JSON.stringify(obj);
+    console.log(Name);
+    console.log(Phone);
+     console.log(obj );
+     Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.AngularController.readAccount}',strobj,
+            function(result, event){
+                if (event.status) {
+                   <!--console.log(result);-->
+                   console.log(result);
+                  document.getElementById('Result1').innerHTML = result
+                } else if (event.type === 'exception') {
+                   <!--console.log(result);-->
+                } else {
+                }
+            }, 
+            {escape: true}
+        );
+    }
+    </script>
+  </body>
+</html>
+</apex:page>

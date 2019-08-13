@@ -1,0 +1,6 @@
+<apex:page controller="contactinformation" >
+    <apex:form >
+        <apex:inputtext value="{!pagetitle}"/>
+        <apex:commandButton value="Change" action="{!Changetitle}"/>
+    </apex:form>
+</apex:page>

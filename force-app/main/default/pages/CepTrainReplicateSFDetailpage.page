@@ -1,0 +1,41 @@
+<apex:page standardController="Account" extensions="Sample">
+<!--?id=0016F00001sSTfX Tests-->
+<!--
+<apex:detail relatedList="false"/>
+<apex:relatedList list="Opportunities"/>
+<apex:relatedList list="Cases"/>
+<apex:relatedList list="Contacts"/>
+<apex:relatedList list="Tests__r"/>
+-->
+<!-- For custom related list use Child Relationship Name and append __r to it-->
+    <apex:form >
+        <apex:pageBlock title="Replicating standard SFDC Account with minimal fields" tabStyle="Account" >
+            <apex:pageBlockSection collapsible="false" title="Account Information" >
+                <apex:pageBlockSectionItem >
+                <apex:outputPanel >Name</apex:outputPanel>
+              <!--  <apex:inputField value="{!Account.Name}" />-->
+                <apex:inputtext value="{!Account.Name}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                <apex:outputPanel >Type</apex:outputPanel>
+                <apex:inputField value="{!Account.Type}" />
+                </apex:pageBlockSectionItem>    
+                
+                <apex:pageBlockSectionItem >
+                <apex:outputPanel >Industry</apex:outputPanel>
+                <apex:inputField value="{!Account.Industry}" />
+                </apex:pageBlockSectionItem> 
+                </apex:pageBlockSection>
+                    
+                <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Save" action="{!Save}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                <apex:commandButton value="Save & New" action="{!saveAndNew}"/>
+                <apex:commandButton value="Store" action="{!insertacc}"/>
+                </apex:pageBlockButtons>              
+        </apex:pageBlock>        
+    </apex:form>
+    <apex:relatedList list="Opportunities"/>
+    <apex:relatedList list="Tests__r"/>        
+</apex:page>

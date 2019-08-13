@@ -1,0 +1,9 @@
+<apex:page standardController="account" extensions="CE2"><!--Standard Controller with Extension-->
+<apex:form >
+<apex:pageBlock >
+{!greeting}
+<apex:inputText value="{!display}" /><!--With this component a Box will apper in the screen for inputText-->
+<apex:commandButton value="Display Button" action="{!display}"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

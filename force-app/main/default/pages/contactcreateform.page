@@ -1,0 +1,20 @@
+<!--VF page which override standard buttons i.e., New and Cancel-->
+<apex:page standardController="contact"  >
+<apex:form >
+<apex:pageBlock title="Contact Edit"  >
+<apex:pageBlockButtons location="Bottom" >
+<apex:commandButton Value="Save" action="{!Save}"/>
+<apex:commandButton Value="Cancel" action="{!cancel}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Contact Information" collapsible="false">
+
+<apex:inputField label="Contact Owner" value="{!contact.Owner.name}" />
+<apex:inputField label="Lead Source" value="{!contact.LeadSource}" />
+<apex:inputField label="First Name" value="{!contact.FirstName}" />
+<apex:inputField label="Email" value="{!contact.Email}" />
+<apex:inputField label="Last Name" value="{!contact.LastName}" />
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>  
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="LearninngClass1" tabStyle="Contact">
+<apex:form >
+<apex:pageBlock title="URl Parameters">
+<apex:pageBlockSection title="Click Custom Button in account based on URL paramaters values will be displayed inside this page" collapsible="False"> 
+</apex:pageBlockSection>
+<!--<apex:inputField label="SpecifyParameter"/>--->
+
+<!--{!name2}-->
+<!--<br>{!study2}</br>-->
+<br>{!ResponseBody}</br>
+</apex:pageBlock>
+</apex:form> 
+</apex:page>

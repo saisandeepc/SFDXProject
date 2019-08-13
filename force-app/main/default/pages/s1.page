@@ -1,0 +1,14 @@
+<apex:page standardController="Account" >
+    <apex:tabPanel ><!--(PROVID ID OF ANY ACCOUNT ?ID=0012800000ZCQ3O) Tabs which show related list of ACCOUNT in VF Page-->
+    <apex:tab label="Account">
+        {!account.name}<br/><br/>
+        {!account.industry}
+    </apex:tab>
+    <apex:tab label="Contact">
+    <apex:relatedList list="contacts"/>
+    </apex:tab>
+    <apex:tab label="opportunities">
+    <apex:relatedList list="opportunities"/>
+    </apex:tab>
+    </apex:tabPanel>
+</apex:page>

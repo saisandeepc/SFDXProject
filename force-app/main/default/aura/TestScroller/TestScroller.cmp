@@ -1,0 +1,16 @@
+<aura:component >
+    <ui:scrollerWrapper class="outerScroller">
+        <!-- Scrollable content here -->
+        <ui:scrollerWrapper class="innerScroller">
+            <div class="slds-scrollable__y" style="height: 5rem; width: 24rem;">
+                <p>Scrollable Content Here</p>
+                <div class="slds-text-longform" style="width: 150%;">
+                    <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
+                    <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
+                    <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
+                </div>
+            </div>
+        </ui:scrollerWrapper>
+        <!-- Scrollable content here -->
+    </ui:scrollerWrapper>
+</aura:component>

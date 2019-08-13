@@ -1,0 +1,6 @@
+<apex:page controller="LearningAbout">
+<apex:form >
+<apex:commandButton action="{!InsertRecords}" value="InsertRecords"/>
+{!Exce}
+</apex:form>
+</apex:page>

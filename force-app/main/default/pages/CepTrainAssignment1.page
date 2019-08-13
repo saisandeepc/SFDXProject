@@ -1,0 +1,38 @@
+<apex:page controller="CepTrainAssig1Cont">
+    <apex:form >
+        <apex:pageBlock title="Select Account to get related contacts">
+            
+            <apex:pageBlockSection >
+                <apex:selectList value="{!SelectedAccount}" size="1" id="mysele" >
+                    <apex:selectOptions value="{!Accountlist}" />
+                    <apex:actionSupport event="onchange" action="{!relatedContactRecs}" status="actStatusId" reRender="mytable"/>
+                </apex:selectList> 
+                    <apex:outputText value="{!SelectedAccount}" label="You have selected:"/>
+            </apex:pageBlockSection>
+              
+                <apex:actionStatus id="actStatusId" >
+                    <apex:facet name="start" >
+                    <img src="/img/loading.gif" />                    
+                    </apex:facet>
+                </apex:actionStatus>                   
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Search" action="{!relatedContactRecs}" reRender="mytable"  />
+            </apex:pageBlockButtons>                       
+        </apex:pageBlock>
+    
+        <apex:pageBlock id="mytable">
+            <apex:pageBlockTable value="{!searchResult}" var="sr">
+                <apex:column >
+                    <apex:commandLink action="{!URLFOR($Action.Contact.Edit,sr.Id)}" value="Edit" /><n>  </n>                    
+                    <apex:commandLink action="{!URLFOR($Action.Contact.Delete,sr.Id)}" value="Delete" />                
+                </apex:column>
+                <apex:column value="{!sr.Account.Name}"/>
+                <apex:column value="{!sr.LastName}"/>
+                <apex:column value="{!sr.Email}"/>
+                <apex:column value="{!sr.CreatedDate}"/>
+                <apex:column headerValue="Owner" value="{!sr.Owner.Name}"/>        
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

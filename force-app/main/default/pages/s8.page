@@ -1,0 +1,15 @@
+<!-- Page: -->
+
+<apex:page standardController="Account">
+
+    <apex:pageBlock title="My Content">
+
+        <apex:pageBlockTable value="{!account.Contacts}" var="c"><!--Table value will hold list format (i.e., list of account,contacts)-->
+
+            <apex:column value="{!c.name}"/> <!--By using Varable we will get information from list-->
+             <apex:column value="{!c.phone}"/>
+        </apex:pageBlockTable> 
+
+    </apex:pageBlock> 
+
+</apex:page>

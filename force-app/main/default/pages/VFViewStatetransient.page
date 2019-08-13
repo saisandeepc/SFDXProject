@@ -1,0 +1,7 @@
+<apex:page controller="ExampleController">
+<apex:form >
+<apex:inputText value="{!currentDateTime}"/>
+
+<apex:commandButton value="Refresh" action="{!mymethod}"/>
+</apex:form>
+</apex:page>

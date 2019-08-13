@@ -1,0 +1,43 @@
+<apex:page controller="apexDogObjectRec">
+<apex:form >
+<apex:pageBlock title="Dog Object Records">
+
+<apex:pageBlockTable value="{!nlist}" var="li" title="Street Dog" id="Control">
+<apex:column >
+<apex:inputField value="{!li.name}"/>        
+</apex:column>
+<apex:column >
+<apex:inputField value="{!li.Type__c}"/> 
+</apex:column>  
+</apex:pageBlockTable>
+
+<apex:pageBlockTable value="{!pdlist}" var="li" title="Pet Dog">
+<apex:column >
+<apex:inputField value="{!li.name}"/>        
+</apex:column>
+<apex:column >
+<apex:inputField value="{!li.Type__c}"/> 
+</apex:column>     
+</apex:pageBlockTable>
+
+<apex:pageBlockTable value="{!arlist}" var="li" title="Army Dog">
+<apex:column >
+<apex:inputField value="{!li.name}"/>        
+</apex:column>
+<apex:column >
+<apex:inputField value="{!li.Type__c}"/> 
+</apex:column>      
+</apex:pageBlockTable>
+
+<apex:pageBlockTable value="{!Allrec}" var="li" title="Class Dog">
+<apex:column value="{!li.d.name}"/>
+<apex:column value="{!li.d.Type__c}"/>   
+</apex:pageBlockTable>
+<apex:pageBlockButtons >    
+<apex:commandButton value="Save" action="{!save}" reRender="Control"/>
+</apex:pageBlockButtons>
+<apex:inlineEditSupport />
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

@@ -1,0 +1,24 @@
+<apex:page >
+    <html>
+    <body>
+    
+    <h2>My First JavaScript</h2>
+    
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+    
+    <p id="demo"></p>
+    debugger
+    <p id="demosai"></p>
+    <script>
+    var a, b, c;
+    a = 10;
+    b = 20;
+    c = a + sb;
+    console.log('--c--'+c);
+    document.getElementById("demosai").innerHTML = c;
+    </script> 
+    </body>
+    </html> 
+</apex:page>

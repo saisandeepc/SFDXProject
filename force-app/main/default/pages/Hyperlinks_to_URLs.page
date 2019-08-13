@@ -1,0 +1,4 @@
+<apex:page >
+  <apex:outputLink value="http://developer.salesforce.com/">Click me!</apex:outputLink>
+  <apex:outputLink value="{! $Page.AccountDisplay}">I am me!</apex:outputLink>
+</apex:page>

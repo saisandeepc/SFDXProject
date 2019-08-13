@@ -1,0 +1,23 @@
+<apex:page standardController="Account" extensions="NonRelatedContactApexClass" >
+<apex:form >
+<!---{!ListCont}This is a way to debug code in VF page-->
+<apex:pageBlock title="Relate Contacts with Accounts">
+
+<apex:pageBlockTable value="{!Allrec}" var="NRC">
+
+<apex:column >
+<apex:inputcheckbox value="{!NRC.check}"/>
+</apex:column>
+<apex:column value="{!NRC.cot.Lastname}"/>
+<apex:column value="{!NRC.cot.Accountid}"/>
+
+
+</apex:pageBlockTable> 
+<apex:pageBlockButtons >    
+<apex:commandButton value="Save" action="{!NewMethod}" />
+</apex:pageBlockButtons> 
+</apex:pageBlock> 
+<!---{!Allrec }This is a way to debug code in VF page-->
+
+</apex:form>  
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page standardController="account" >
+  <apex:pageBlock title="My Account Contacts">
+  
+     <apex:pageBlockTable value="{! account.contacts}" var="item">
+    
+           <apex:column value="{! item.name}"/>
+           <apex:column value="{! item.Title}"/>
+           <apex:column value="{! item.Phone}"/>
+           <apex:column value="{! item.Email}"/>
+          
+      </apex:pageBlockTable>
+     
+   </apex:pageBlock>
+</apex:page>

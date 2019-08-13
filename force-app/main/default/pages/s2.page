@@ -1,0 +1,4 @@
+<apex:page standardController="account" extensions="CE1">
+{!account.name}<!--(PROVID ID OF ANY ACCOUNT ?ID=0012800000ZCQ3O) Using Controller Extenstion Displaying Greeting Message in VF Page-->
+{!greeting}
+</apex:page>

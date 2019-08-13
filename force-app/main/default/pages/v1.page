@@ -1,0 +1,9 @@
+<apex:page standardController="account" sidebar="false" >
+<!--This is Standard Controler page SO provide ID of Sobject-->
+<apex:pageBlock title="Account Name and Industry">
+Account Name={!account.name}<br/><br/>
+Industry={!account.industry}
+</apex:pageBlock>
+
+  
+</apex:page>

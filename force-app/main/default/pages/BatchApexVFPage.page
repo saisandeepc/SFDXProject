@@ -1,0 +1,9 @@
+<apex:page controller="BachExeController2">
+<apex:pageBlock title="Batch Apex Class">
+<apex:pageBlockSection title="Click this Button to Insert Records" collapsible="false">
+<apex:form >
+<apex:commandButton value="Insert" action="{!MyMethod}"/>
+</apex:form>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page controller="picklistascheck">
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageBlockSection columns="1">
+                    <apex:pageblocksectionitem >         
+                        <apex:outputlabel value="Industry" />
+                        <apex:selectcheckboxes layout="pageDirection" value="{!IndustryName}">                  
+                            <apex:selectoptions value="{!IndustryNames}" />         
+                        </apex:selectcheckboxes>
+                    </apex:pageblocksectionitem>
+             </apex:pageBlockSection>
+         </apex:pageblock>
+     </apex:form>
+</apex:page>

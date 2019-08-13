@@ -1,0 +1,8 @@
+({
+    doInit : function(component, event, helper) {
+        var g =[{"Id":"00141000008zCtMAAU","Name":"GenePoint","BillingState":"CA","AnnualRevenue":"350000000","Type":"Customer - Channel","Industry":"Biotechnology"}, {"Id":"00141000008zCtKAAU","Name":"United Oil & Gas,UK","BillingState":"UK","AnnualRevenue":"320000000","Type":"Customer - Direct","Industry":"Energy"},{"Id":"00141000008zCtLAAU","Name":"United Oil & Gas, Singapore","BillingState":"Singapore","AnnualRevenue":"280000000","Type":"Customer - Direct","Industry":"Energy"},
+{"Id":"00141000008zCtCAAU","Name":"Edge Communications","BillingState":"TX","AnnualRevenue":"275000000","Type":"Customer - Direct","Industry":"Electronics"},{"Id":"00141000008zCtDAAU","Name":"Burlington Textiles Corp of America","BillingState":"NC","AnnualRevenue":"245000000","Type":"Customer - Direct","Industry":"Apparel"},{"Id":"00141000008zCtEAAU","Name":"Pyramid Construction Inc.","BillingState":"UT","AnnualRevenue":"230000000","Type":"Customer - Channel","Industry":"Construction"},{"Id":"00141000008zCtFAAU","Name":"Dickenson plc","BillingState":"KS","AnnualRevenue":"21000000","Type":"Customer - Channel","Industry":"Consulting"},{"Id":"00141000008zCtGAAU","Name":"Grand Hotels & Resorts Ltd","BillingState":"IL","AnnualRevenue":"20000000","Type":"Customer - Direct","Industry":"Hospitality"},{"Id":"00141000008zCtIAAU","Name":"Express Logistics and Transport","BillingState":"OR","AnnualRevenue":"16000000","Type":"Customer - Channel","Industry":"Transportation"},{"Id":"00141000008zCtJAAU","Name":"University of Arizona","BillingState":"AZ","AnnualRevenue":"11000000","Type":"Customer - Direct","Industry":"Education"}];
+component.set("v.objectArrayofAccounts", g);
+component.set("v.acct", g[0]); 
+    }
+})

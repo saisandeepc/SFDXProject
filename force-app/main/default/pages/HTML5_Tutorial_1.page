@@ -1,0 +1,16 @@
+<apex:page title="HTML Basics">
+<html lang="en-US">
+<head> 
+<title >This page is used for Learning HTML</title>
+</head>
+<body>
+<h3>This page is used for Learning HTML</h3>
+<p title="I'm a tooltip">Hellow World</p>
+<h1>My name is Sai</h1><br></br><hr></hr><!--thematic break-->
+<apex:image title="I'm Sandeep" url="{!URLFOR($Resource.MyHTMLTestResources,'Sandeep.jpg')}" width="50" height="50"/><br></br><hr></hr>
+<h1>HTML links are defined with the  tag</h1><br></br>
+<a title="I'm a tooltip" href="https://www.w3schools.com">This is a link</a>
+<a title="I'm a tooltip" href="https://www.google.com">Googel Link</a>
+</body>
+</html>
+</apex:page>

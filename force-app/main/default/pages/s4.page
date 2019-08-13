@@ -1,0 +1,4 @@
+<apex:page standardController="account" extensions="CE3,CE4,CE5">
+{!test}<!--Order of execution of Controller extension will depend upon the Order specified in VF page-->
+{!greeting}
+</apex:page>

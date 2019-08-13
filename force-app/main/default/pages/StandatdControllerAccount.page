@@ -1,0 +1,9 @@
+<apex:page standardController="Account" extensions="Extension1,Extension2">
+
+<apex:form >
+    {!myVar}
+    
+    <apex:inputText value="{!myVar}"/>
+    <apex:commandButton action="{!sampleAction}"/>
+</apex:form>
+</apex:page>

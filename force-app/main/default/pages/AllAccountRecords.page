@@ -1,0 +1,12 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+<apex:form >
+<apex:pageBlock title="Account Records Created by User" >
+<apex:pageBlockTable value="{!accounts}" var="all">
+<apex:column value="{!all.Name}"/>
+<apex:column value="{!all.Owner.Phone}"/>
+<apex:column value="{!all.AccountNumber}"/>
+<apex:column value="{!all.Owner.Name}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

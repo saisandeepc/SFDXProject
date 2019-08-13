@@ -1,0 +1,48 @@
+<apex:page >
+<apex:form >
+<apex:pageBlock title="VF Page"  >
+<apex:pageBlockSection title="Page" >
+<apex:inputText />
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+<html>
+<head>
+<title>MY First JavaScript That Displays Multiplication of two numbers in Page and Input field </title>
+</head>
+<body>
+<h1>
+MY First JavaScript
+</h1>
+<p>Enter a Value</p>
+<input type="number" id="myInput" min="1" max="5"/>
+<br/><br/>
+<p>Enter a Value</p>
+<input type="number" id="Data"/>
+<br/><br/>
+<p >The Multiplication value is </p>
+<input type="number" id="myNUMBER" value='100'/>
+<p id="my IP">
+The multiple value is
+</p>
+
+<br/>
+<br/>
+<button onclick="myaction()">
+Multiple
+</button>
+<script>//JS//
+function myaction(){
+var S;
+var A;  
+var Sum;
+S=document.getElementById('myInput').value;
+A=document.getElementById('Data').value;    
+Mul=S*A;
+document.getElementById('my IP').innerHTML = 'The Multiplication value is '+Mul;
+document.getElementById('myNUMBER').value = Mul;
+}
+</script>
+</body>
+</html>
+</apex:page>

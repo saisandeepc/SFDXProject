@@ -1,0 +1,16 @@
+<aura:component >
+
+  <aura:registerEvent name="ServiceAppEvent" type="c:ServiceAppEvent"/>
+  <aura:registerEvent name="ServiceCompEvent" type="c:ServiceCompEvent"/>
+
+  <aura:method name="fireAppEvent" action="{! c.handleFireApplicationEvent }">
+    <aura:attribute name="eventKey" type="String"/>
+    <aura:attribute name="eventValue" type="Object"/>
+  </aura:method>
+
+  <aura:method name="fireCompEvent" action="{! c.handleFireComponentEvent }">
+    <aura:attribute name="eventKey" type="String"/>
+    <aura:attribute name="eventValue" type="Object"/>
+  </aura:method>
+
+</aura:component>

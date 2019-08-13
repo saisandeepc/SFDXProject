@@ -1,0 +1,26 @@
+<apex:page controller="PackageInformation" ><!--Step 1--(Create a Controller)-->
+<apex:form >
+<apex:pageBlock title="TRAVEL PACKAGES"   ><!--1.2-->    
+<apex:pageBlockSection Title="Available Packages And Expired Packages" collapsible="false" columns="1"> <!--1.3--> 
+
+<apex:inputtext value="{!display }"/>
+<apex:commandButton value="Search by Destination" action="{!search}" reRender="Mytable"/> 
+
+ <apex:pageblockTable value="{!AvailablePackages}" var="ap" id="Mytable"> <!--Will get values from controller--> <!--5-->
+    <apex:column value="{!ap.Destination__c}"/>        
+    <apex:column value="{!ap.name}"/>      <!--5.1 Destination__c-->
+    <apex:column value="{!ap.Seats__c}"/>  <!--5.2-->
+    <apex:column value="{!ap.Cost__c}"/>    <!--5.3-->
+    <apex:column value="{!ap.Expired__c}" /> <!--5.4-->                        
+ </apex:pageblockTable>
+ 
+ </apex:pageBlockSection>
+ <apex:pageBlockButtons location="bottom" ><!--6-->
+        
+<apex:commandButton value="Available Packages" action="{!AvailablePackages}" reRender="Mytable" /><!--Will get logic from controller(PageReference method)--><!--6.2-->
+<apex:commandButton value="Expired Packages" action="{!ExpiredPackages}" reRender="Mytable" /><!--Will get logic from controller(PageReference method)--> <!--6.3-->
+
+</apex:pageBlockButtons>
+</apex:pageBlock>   
+</apex:form>
+</apex:page>

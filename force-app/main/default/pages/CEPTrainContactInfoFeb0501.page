@@ -1,0 +1,37 @@
+<apex:page controller="CepTrainContactInfoController"  >
+    <apex:form >
+       <apex:pageMessages id="pgmsg"></apex:pageMessages>
+        <apex:pageBlock title="Page is used to save,search and edit contacts" tabStyle="Account" id="SaveControl">
+           
+            <apex:pageBlockSection title="Contact Info" collapsible="false" columns="1" >
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel >Last Name</apex:outputPanel>
+                    <apex:inputText value="{!lastname}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel ><b>Title</b></apex:outputPanel>
+                    <apex:inputText value="{!pgtitle}" />
+                </apex:pageBlockSectionItem> 
+            </apex:pageBlockSection>
+                                  
+            <apex:pageBlockButtons location="Bottom">
+                <!-- <apex:commandButton value="Save & New" action="{!Savenew}"/>-->
+                <apex:commandButton value="Save" action="{!saveContactRecord}" />
+                <apex:commandButton value="Search" action="{!searchContactRecords}" reRender="tableid"/>            
+            </apex:pageBlockButtons>            
+         </apex:pageBlock>
+            
+        <apex:pageblock id="tableid">
+            <apex:pageBlockTable value="{!conList}" var="con">
+                <apex:column >
+                    <apex:commandLink action="{!URLFOR($Action.Contact.Edit,con.Id)}" value="Edit" /><n>  </n>                    
+                    <apex:commandLink action="{!URLFOR($Action.Contact.Delete,con.Id)}" value="Delete" />                
+                </apex:column>
+                <apex:column value="{!con.LastName}"/>
+                <apex:column value="{!con.Email}"/>   
+                <apex:column value="{!con.Owner.Name}"/>
+                <apex:column value="{!con.CreatedDate}"/>   
+        </apex:pageBlockTable>        
+        </apex:pageblock>
+    </apex:form>
+</apex:page>
