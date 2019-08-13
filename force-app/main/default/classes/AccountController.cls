@@ -12,6 +12,7 @@ public class AccountController {
         	System.debug('--accList.size()-------'+accList.size());
         if(accList.size() == 0){
             System.debug('--accList-------'+accList);
+            System.debug('--accList Two-------'+accList);
           throw new AuraHandledException('accList');  
         }
         
