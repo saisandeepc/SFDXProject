@@ -11,7 +11,6 @@ public class AccountController {
             accList = [SELECT Name FROM Account];
         	System.debug('--accList.size()-------'+accList.size());
         if(accList.size() == 0){
-            System.debug('--accList-------'+accList);
           throw new AuraHandledException('accList');  
         }
         
