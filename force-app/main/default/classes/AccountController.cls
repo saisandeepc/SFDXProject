@@ -8,9 +8,10 @@ public class AccountController {
         
         List<Account> accList = new List<Account>();
         
-            accList = [SELECT Name FROM Account];
-        	System.debug('--accList.size()-------'+accList.size());
+        accList = [SELECT Name FROM Account];
+        System.debug('--accList.size()-------'+accList.size());
         if(accList.size() == 0){
+          System.debug('--AuraHandledException---');
           throw new AuraHandledException('accList');  
         }
         
